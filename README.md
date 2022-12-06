@@ -1,99 +1,35 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Challenge 2: Code Quiz
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This is a cute little pop quiz App to test the user's basic JavaScript knowledge!
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+When the page loads, the rules of the quiz is displayed. Once the user clicks on the Start Quiz button, the first qustion will be displayed, followed by four options for the user to choose from and click on, while a countdown starts from 90 seconds. Once the user clicks on an option, they will be shown the next question, and their score will be updated accordingly. There's also color and sound indicators to let the user know if they've answered the previous question correctly. For each correct answer, 5 points will be added to the user's score. For each incorrect answer, 5 seconds will be subtracted from the countdown. If the user answers all 20 questions before the 90-second countdown ends, they will get a congratulatory message and will be asked to enter their initials for the score board. Once the user's initials are entered, the score board will display, which includes the initials and scores of previous users who also finished the 20 questions within 90 seconds. The user then will get two buttons below the score board- a Clean Board button (whick wipes the score board clean), and a Try Again button (which will refresh the App for the user to take the quiz again). If the 90 second ends before the user is able to finish all 20 questions, they will get a sad message and sound effect and will not be prompted to enter their initials for the score board, and will instead be given the Try Again button). 
 
-## User Story
+At the very bottom of the App the user can toggle between light mode and dark mode, and the color scheme of the page will transition accordingly (with sound effects, too!)
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+This App is made for both larger and smaller viewports.
 
-## Acceptance Criteria
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+The URL of the deployed, refactored webpage is can be found at: https://feddericowayne.github.io/Challenge-3-JavaScript-Quiz/
 
-The following animation demonstrates the application functionality:
+Here's a screenshot of the webpage:
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+![image](./Assets/Screenshot.png)
 
-## Grading Requirements
+## Installation
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+N/A
 
-This Challenge is graded based on the following criteria:
+## Usage
 
-### Technical Acceptance Criteria: 40%
+Use this App to test your own or your students' JavaScript knowledge!
 
-* Satisfies all of the above acceptance criteria plus the following:
+## Credits
 
-  * Uses a date utility library to work with date and time
+N/A
 
-### Deployment: 32%
+## License
 
-* Application deployed at live URL
+Please refer to the LICENSE in the repo.
 
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
