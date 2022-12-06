@@ -1,0 +1,112 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.description {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  white-space: pre-wrap;
+  border: 2px solid black;
+  margin-right: 5px;
+  transition-duration: 1s;
+  transition-property: box-shadow, background-color;
+}
+
+.description:focus {
+  color: black;
+  white-space: pre-wrap;
+  box-shadow: inset 0 0 0 5px #06aed5;
+  background-color: rgb(251, 251, 112);
+  transition-duration: 1s;
+  transition-property: box-shadow, background-color;
+}
+
+.time-block {
+  border-radius: 15px;
+  
+}
+
+.row {
+  border-top: 1px solid white;
+  justify-content: center;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: black;
+}
+
+.future {
+  background-color: #77dd77;
+  color: black;
+}
+
+.saveBtn {
+  border: 2px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Clear Button Styling */
+.clear {
+  font-size: 12px;
+  border: 2px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+}
+
+.clear:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Reminder Blinking on Save Button */
+@keyframes blink {
+  0% {
+    background-color: #06aed5;
+  }
+
+  50% {
+    background-color: #ff6961;
+  }
+
+  100% {
+    background-color: #06aed5;
+  }
+
+}
+
+.reminder {
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
