@@ -1,5 +1,6 @@
 /* Displaying Current Date and Time, including Second */
 function dateAndTime() {
+
   var date = dayjs().format('dddd, MMM DD, YYYY');
   var time = dayjs().format('h:mm:ss A');
   $("#currentDay").text("Today is " + date + " , and it is now " + time + " EST");
@@ -7,23 +8,40 @@ function dateAndTime() {
 }; 
 
 /* Get Current Hour to Assign Text Box Background Colors */
-
-
 function changeColor() {
-  //issue: x doesn't change unless page is refreshed, and will stay the same once page is loaded
   
   var currentHour = dayjs().format('hA');
 
   for (var x=0; x<$('.hour').length; x++) {
 
     if ($('.hour')[x].textContent === currentHour) {
-      
+
       $('.time-block').eq(x).prevAll().children().filter(".description").addClass("past");
       $('.time-block').eq(x).children().filter(".description").addClass("present");
       $('.time-block').eq(x).nextAll().children().filter(".description").addClass("future");
+
       }
     }
 
+};
+
+/* Refreshes Page to Reflect Correct Text Box Color When the Time Crosses over to Next Hour */
+function nextHour() {
+
+  var refreshHour = dayjs().format('mm:ss');
+
+  if (refreshHour === '00:00'){
+
+    /* Security Save before the Page Refreshes to Reflect Correct Time Box Color */
+    for (var i=0; i< $('.description').length; i++) {
+
+      var safetySaveContent = $('.description').eq(i).val();
+      var safetySaveKey = "#" + $('.time-block').eq(i).attr('id');
+      localStorage.setItem(safetySaveKey,safetySaveContent);
+
+    }
+    location.reload();
+  }
 };
 
 
@@ -49,6 +67,9 @@ $(function () {
   /* To Set Background Color Based on Time of Day, Updated by the Second */
   setInterval(changeColor,1000);
 
+  /* To Refresh the Page when it's the Next Hour */
+  setInterval(nextHour,1000);
+
   $('.description').on("keydown", function() {
     typing.play();
   })
@@ -70,8 +91,8 @@ $(function () {
     $(this).prev().val("");
     $(this).prev().fadeTo(500,1);
     var clearTask = $(this).parent().attr('id');
-    var clearTaskTag = "#" + clearTask;
-    localStorage.setItem(clearTaskTag,"");
+    var clearTaskId = "#" + clearTask;
+    localStorage.setItem(clearTaskId,"");
 
   })
 
@@ -85,16 +106,16 @@ $(function () {
   /* Even Listener for Save Buttons */
   $('.saveBtn').on('click',function(){
 
-    var idTag = $(this).parent().attr('id');
+    var idName = $(this).parent().attr('id');
 
-    var taskDescription = $('#' + idTag).children().filter($(".description")).val();
+    var taskDescription = $('#' + idName).children().filter($(".description")).val();
 
     saveData.play();
 
-    $('#' + idTag).children().filter($(".description")).fadeOut(300);
-    $('#' + idTag).children().filter($(".description")).fadeIn(300);
+    $('#' + idName).children().filter($(".description")).fadeOut(300);
+    $('#' + idName).children().filter($(".description")).fadeIn(300);
 
-    localStorage.setItem('#' + idTag,taskDescription);
+    localStorage.setItem('#' + idName,taskDescription);
 
   })
 
