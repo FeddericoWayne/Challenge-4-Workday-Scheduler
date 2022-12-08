@@ -30,7 +30,11 @@ function nextHour() {
 
   var refreshHour = dayjs().format('mm:ss');
 
-  if (refreshHour === '00:00'){
+  if (refreshHour === '59:57') {
+    countDown.play();
+  }; 
+
+  if (refreshHour === '00:01'){
 
     /* Security Save before the Page Refreshes to Reflect Correct Time Box Color */
     for (var i=0; i< $('.description').length; i++) {
@@ -57,6 +61,9 @@ saveData.src = "Assets/Sound Effects/Save.wav";
 
 var erase = new Audio();
 erase.src = "Assets/Sound Effects/Clear.wav";
+
+var countDown = new Audio();
+countDown.src = "Assets/Sound Effects/Hour Countdown.wav";
 
 
 $(function () {
