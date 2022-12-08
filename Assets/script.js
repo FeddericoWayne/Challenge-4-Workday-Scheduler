@@ -1,8 +1,8 @@
 /* Displaying Current Date and Time, including Second */
 function dateAndTime() {
-  var date = dayjs().format('MMM DD, YYYY');
+  var date = dayjs().format('dddd, MMM DD, YYYY');
   var time = dayjs().format('h:mm:ss A');
-  $("#currentDay").text("Today is " + date + " , and it is now " + time);
+  $("#currentDay").text("Today is " + date + " , and it is now " + time + " EST");
 
 }; 
 
