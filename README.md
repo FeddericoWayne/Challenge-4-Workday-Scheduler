@@ -14,7 +14,7 @@ past hours are grey, and the current hour is red.
 The page refreshes automatically on the hour to reflect the correct color-coding. To prevent the users from losing
 entered data while the page is being reloaded, I inserted an automatic save function for all the text box, which is triggered and executed right before the page reloads so that users can resume typing afterwards without data loss. I've also inserted a countdown sound effect to alert the users that they're moving onto the next hour and the page is about to refresh.
 
-The URL of the deployed, refactored webpage is can be found at: 
+The URL of the deployed, refactored webpage is can be found at: https://feddericowayne.github.io/Challenge-4-Workday-Scheduler/
 
 Here's a screenshot of the webpage:
 
