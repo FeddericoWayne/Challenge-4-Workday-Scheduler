@@ -1,4 +1,4 @@
-# Challenge 5: Word Day Scheduler
+# Word Day Scheduler
 
 ## Description
 
