@@ -1,4 +1,4 @@
-# Word Day Scheduler
+# Workday Scheduler
 
 ## Description
 
